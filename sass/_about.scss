@@ -1,0 +1,58 @@
+.about {
+  background-image: url(../assets/about-us-background.jpg);
+  background-size: 100%;
+  background-position: center;
+ 
+}
+
+.icon {
+  filter: invert(100%);
+  margin-left: 3rem;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+
+  &--1 {
+    max-width: 33.33%;
+    margin-left: 3rem;
+    font-size: 2rem;
+    h1 {
+      font-weight: 300;
+    }
+  }
+
+  &--2 {
+    font-family: serif;
+    max-width: 66.6666%;
+    font-size: 2rem;
+    margin: 3rem 1rem 5rem 3rem;
+  }
+
+  &--bottom {
+    .btn-about {
+      margin-left: 1rem;
+      background: none;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      color: $color-primary;
+      border: 3px solid $color-primary;
+      outline: none;
+      border-radius: 0.6rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease-in;
+
+      &:hover {
+        color: #fff;
+        border: 3px solid #fff;
+        transform: scaleX(1.1);
+        box-shadow: 0 0.1rem 0.3rem #fff;
+      }
+    }
+  }
+}

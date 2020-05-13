@@ -1,0 +1,134 @@
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 1200px;
+}
+.cover {
+  max-width: 100%;
+
+  background-size: cover;
+  @include respond(tab-port) {
+    max-width: 130%;
+  }
+  @include respond(phone) {
+    max-width: 150%;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: $color-primary;
+  @include respond(phone) {
+    top: 70%;
+  }
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  @include respond(phone) {
+    font-size: 3rem;
+  }
+}
+
+.content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 1 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  animation: contentSlide 1.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both .5s;
+  @include respond(tab-port) {
+    width: 70%;
+  }
+  @include respond(phone) {
+    width: fit-content;
+    font-size: 1.5rem;
+    height: 50%;
+  }
+
+  span {
+    color: $color-primary;
+  }
+  &-heading {
+    margin-bottom: 1rem;
+    margin-bottom: 3rem;
+    backface-visibility: hidden;
+
+    h1 {
+      font-weight: 200;
+      animation: slide 2s;
+      animation-delay: 0.1s;
+      transition: all 0.3s;
+    }
+  }
+  &-main {
+    display: flex;
+    p {
+      font-family: serif;
+    }
+    img {
+      @include respond(phone) {
+        width: 50px;
+      }
+    }
+  }
+  &-regards {
+    h3 {
+      font-weight: 400;
+      margin: 4rem 0 1rem 0;
+      @include respond(phone) {
+        margin: 0.4rem;
+      }
+    }
+    img {
+      margin-bottom: 4rem;
+      @include respond(phone) {
+        width: 50px;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  .btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1rem;
+    color: $color-nav-primary;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    border: 3px solid $color-nav-primary;
+    opacity: .5;
+    transition: all .3s ease;
+
+    &:hover {
+      box-shadow: 0 1.5rem 2rem rgba(black, 0.3);
+      opacity: 1;
+    }
+  }
+}
+.main-bottom {
+  background-color: #576163;
+  font-size: 1.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  .section {
+    width: 20%;
+    margin: 0.5rem 1.5rem;
+    img {
+      padding-bottom: 1.5rem;
+    }
+    &:nth-child(2) {
+      border-left: 1px solid #d3e8ec;
+      border-right: 1px solid #d3e8ec;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fff;
+
+    &-navigation {
+        list-style-type: none;
+        cursor: pointer;
+
+        &-item {
+            display: inline-block;
+            padding: 0 1rem;
+            &:not(:last-child) {
+                border-right: 1px solid black;
+            }
+        }
+    }
+    &-social {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h5 {
+            display: inline-block;
+        }
+        img {
+            cursor: pointer;
+        }
+    }
+}
